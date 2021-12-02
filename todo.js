@@ -34,7 +34,7 @@ function addTodo(e){
     if(newTodo === ""){
         /*
             <div class="alert alert-danger" role="alert">
-                <strong>Wtf?</strong> What's up men?
+                <strong>Wrong</strong> Please entry something
             </div>
         */
         showAlert("danger","Please entry something");
@@ -44,7 +44,7 @@ function addTodo(e){
     else{
         addTodoUI(newTodo);
         addTodoStorage(newTodo);
-        showAlert("success","That is awesome bro!")
+        showAlert("success","That is awesome")
     }
 
     e.preventDefault();
@@ -114,7 +114,7 @@ function deleteTodo(e){
     if(e.target.className=="fa fa-remove"){
         e.target.parentElement.parentElement.remove();
         deleteTodoFromStorage(e.target.parentElement.parentElement.textContent);
-        showAlert("success","todo is removed men!")
+        showAlert("success","Todo is removed")
     }
 }
 
